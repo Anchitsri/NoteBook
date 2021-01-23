@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>NOTE BOOK</title>
+
+    <style>
+        body {
+            background-image: url("bg1.jpg");
+            background-size: cover;
+            height: 100%;
+
+        }
+
+        table {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark" style="position:sticky;top:0px;">
+        <div class="container-fluid">
+            <a class="navbar-brand">NOTE BOOK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="">Home</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control " type="search" placeholder="Search Your Note" id="searchtxt"
+                        aria-label="Search">
+
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-4">
+        <div id="todocont">
+            <h2 style="text-align: center">NOTE BOOK</h2>
+
+            <div class="mb-3">
+                <label for="title" class="form-label" style="font-weight: bold">Title</label>
+                <input type="text" class="form-control" id="title" style="background-color:transparent">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label" style="font-weight: bold">Description</label>
+                <textarea class="form-control" id="description" rows="3"
+                    style="background-color:transparent"></textarea>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary" id="add">Add to Todo List</button>
+            <button class="btn btn-primary" onclick="clearstorage()">Clear List</button>
+        </div>
+        <div id="items">
+            <h3 class="my-4 " id="headingb">Your Saved Items</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">SNo.</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Dated</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tablebody">
+                    <!-- Content added by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script defer src="app.js">
+    </script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
